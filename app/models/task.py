@@ -15,7 +15,6 @@ class Task(Base):
     priority = Column(Integer, default=0)
     completed = Column(Boolean, default=False)
     slug = Column(String, unique=True, index=True)
-
     user = relationship('User', back_populates='tasks')
 
 
